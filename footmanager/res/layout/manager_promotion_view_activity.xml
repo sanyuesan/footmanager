@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/manager_main_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/mainView" >
+    <LinearLayout android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:gravity="top">
+		   <include layout="@layout/title_bar_without_right_btn"
+    			android:id="@+id/mainTitle"/> 
+	</LinearLayout>
+	
+     <ScrollView android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"> 
+	    <LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content">
+			<RelativeLayout android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/content_bg">
+			   <LinearLayout android:id="@+id/baseInfoLinear"
+			       android:orientation="horizontal"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content">
+					<ImageView android:id="@+id/promotionIcon" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:layout_gravity="center_vertical"
+						android:layout_marginLeft="3dp"
+						android:background="@drawable/team_user_photo"/>
+					<LinearLayout android:orientation="vertical"
+						android:layout_width="wrap_content" 
+						android:layout_height="fill_parent"
+						android:layout_gravity="center_vertical"
+						android:layout_marginTop="5dp"
+						android:layout_marginBottom="5dp">
+				
+					    <LinearLayout android:orientation="horizontal"
+							android:layout_width="fill_parent" 
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:gravity="center_vertical">
+							<TextView
+							    android:layout_width="wrap_content"
+								android:layout_height="wrap_content" 
+								android:textColor="#000000"
+								android:text="名称："
+								android:textSize="16sp" />
+							<TextView android:id="@+id/promotionName" 
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content" 
+								android:textColor="#000000"
+								android:textSize="16sp" />
+						</LinearLayout>
+						<LinearLayout android:orientation="horizontal"
+							android:layout_width="fill_parent" 
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:gravity="center_vertical">
+							<TextView
+							    android:layout_width="wrap_content"
+								android:layout_height="wrap_content" 
+								android:textColor="#000000"
+								android:text="面值："
+								android:textSize="16sp" />
+							<TextView android:id="@+id/promotionValue" 
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content" 
+								android:textColor="#000000"
+								android:textSize="16sp" />
+						</LinearLayout>
+						<LinearLayout android:orientation="horizontal"
+							android:layout_width="fill_parent" 
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:gravity="center_vertical">
+							<TextView
+							    android:layout_width="wrap_content"
+								android:layout_height="wrap_content" 
+								android:textColor="#000000"
+								android:text="需求度："
+								android:textSize="16sp" />
+							<ImageView android:id="@+id/promotionLevel" 
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:background="@drawable/team_user_star" />
+						</LinearLayout>
+					</LinearLayout>
+					<LinearLayout android:id="@+id/myPromotionOutmodedInfo"
+						android:layout_width="fill_parent" 
+						android:layout_height="fill_parent"
+						android:gravity="right|center_vertical"
+						android:visibility="visible" >
+							<ImageView android:id="@+id/myPromotionOutmodedImage"
+							    android:layout_width="wrap_content"
+								android:layout_height="wrap_content" 
+								android:layout_marginRight="5dp"
+								android:background="@drawable/outmoded"
+								/>
+					</LinearLayout>
+				</LinearLayout>
+			    <LinearLayout android:id="@+id/myPromotionCountInfo"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@id/baseInfoLinear"
+			        android:layout_marginLeft="13dp"
+			        android:gravity="top"
+			        android:orientation="horizontal"
+			        android:visibility="visible"
+			        >
+			        <TextView
+					    android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:text="购买数量:"
+						android:textSize="16sp" 
+						android:layout_marginBottom="15dp"/>
+					<TextView android:id="@+id/promotionBuyCount" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:textSize="16sp"
+						android:text="1500张" />
+					<TextView android:id="@+id/promotionUsedCount"
+					    android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:text="已使用1000张"
+						android:textSize="16sp"
+						android:layout_marginLeft="15dp"/>
+					<TextView android:id="@+id/promotionSurplusCount" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:textSize="16sp"
+						android:text="剩余500张"
+						android:layout_marginLeft="15dp"/>
+			    </LinearLayout>
+			    
+			</RelativeLayout>
+			
+		   <LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" 
+				android:layout_height="80dp"
+				android:background="@drawable/content_bg">
+				<TextView
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:text="有效期："
+					android:textSize="18sp"
+					android:layout_marginTop="8dp"
+					android:layout_marginLeft="15dp" />
+				<ImageView 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/content_center_border"
+					android:layout_marginLeft="12dp"
+					android:layout_marginRight="12dp" />
+				<TextView android:id="@+id/promotionTimeLimit"
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:text="5月1日至5月7日"
+					android:textSize="18sp"
+					android:layout_gravity="center_horizontal"/>
+			</LinearLayout>
+			
+		   <LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" 
+				android:layout_height="150dp"
+				android:background="@drawable/content_bg">
+				<TextView
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:text="使用说明："
+					android:textSize="18sp"
+					android:layout_marginTop="8dp"
+					android:layout_marginLeft="15dp" />
+				<ImageView 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/content_center_border"
+					android:layout_marginLeft="12dp"
+					android:layout_marginRight="12dp" />
+				<TextView android:id="@+id/promotionTimeLimit"
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:text="5月1日至5月7日"
+					android:textSize="18sp"
+					android:layout_gravity="center_horizontal"/>
+			</LinearLayout>
+			
+		   <LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" 
+				android:layout_height="180dp"
+				android:background="@drawable/content_bg">
+				<TextView
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:text="活动建议："
+					android:textSize="18sp"
+					android:layout_marginTop="8dp"
+					android:layout_marginLeft="15dp" />
+				<ImageView 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/content_center_border"
+					android:layout_marginLeft="12dp"
+					android:layout_marginRight="12dp" />
+				<TextView android:id="@+id/promotionTimeLimit"
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:text="5月1日至5月7日"
+					android:textSize="18sp"
+					android:layout_gravity="center_horizontal"/>
+			</LinearLayout>
+			
+		   <LinearLayout android:layout_width="fill_parent"
+		     android:layout_height="wrap_content" 
+		     android:gravity="bottom">
+			     <Button android:id="@+id/receiveBtn"
+			         android:layout_width="wrap_content"
+			         android:layout_height="wrap_content"
+			         android:background="@drawable/login_btn_selector"
+			         android:text="立即认领"
+			         android:textSize="20sp"
+			         android:textColor="#ffffff"
+			         android:layout_marginLeft="15dp"
+			         android:layout_marginRight="15dp"
+			         android:layout_marginBottom="5dp"/>
+		</LinearLayout>
+		   
+		</LinearLayout>
+	 </ScrollView>
+
+</LinearLayout>

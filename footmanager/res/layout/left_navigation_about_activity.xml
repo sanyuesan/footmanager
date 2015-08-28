@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/kaixin_background"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:id="@+id/mainView" >
+    <LinearLayout android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:gravity="top">
+		   <include layout="@layout/title_bar_without_right_btn"
+    			android:id="@+id/mainTitle"/> 
+	</LinearLayout>
+    
+    <LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:gravity="center">
+	    <ImageView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@drawable/about_us"/>
+	    <TextView
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textColor="#818181"
+			android:text="@string/version"
+			android:textSize="20sp"
+			android:layout_marginBottom="20dp"/>
+	</LinearLayout>
+    
+    <LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:gravity="bottom">
+		<RelativeLayout android:gravity="center_horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content">
+			<ImageView android:id="@+id/tel_icon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/tel"/>
+		    <TextView android:id="@+id/tel" 
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:textColor="#818181"
+				android:text="@string/tel"
+				android:textSize="18sp"
+				android:layout_toRightOf="@id/tel_icon"/>
+		</RelativeLayout>
+	    <TextView android:id="@+id/splashUrl" 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textColor="#818181"
+			android:text="@string/url"
+			android:textSize="18sp"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginBottom="20dp"/>
+	</LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

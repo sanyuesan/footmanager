@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/technician_main_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true" 
+    android:id="@+id/mainView">
+    <include layout="@layout/title_bar_without_right_btn"
+  			android:id="@+id/mainTitle"/> 
+   	<ListView
+           android:id="@+id/list"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="left"
+           android:choiceMode="singleChoice"
+           android:listSelector="@drawable/team_list_selector"
+           android:divider="@null" />
+    
+
+</LinearLayout>

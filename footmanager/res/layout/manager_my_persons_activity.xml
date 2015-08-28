@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/manager_main_bg"
+        android:orientation="vertical" >
+        <LinearLayout android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:gravity="top">
+		   <include layout="@layout/title_bar_without_right_btn"
+    			android:id="@+id/mainTitle"/> 
+	   </LinearLayout> 
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioGroup
+                android:id="@+id/main_tab_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/tab_menu_bottom_bg"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                 >
+
+                <RadioButton
+                    android:id="@+id/tab_btn_1"
+                    style="@style/MMTabButton"
+                    android:background="@drawable/manager_my_persons_tab_menu_selector"
+                    android:layout_weight="1.0"   
+                    android:checked="true" 
+                    android:text="推荐圈"/>
+
+                <RadioButton
+                    android:id="@+id/tab_btn_2"
+                    style="@style/MMTabButton"
+                    android:background="@drawable/manager_my_persons_tab_menu_selector"
+                    android:layout_weight="1.0"
+                    android:text="代理圈" />
+                
+                <RadioButton
+                    android:id="@+id/tab_btn_3"
+                    style="@style/MMTabButton"
+                    android:background="@drawable/manager_my_persons_tab_menu_selector"
+                    android:layout_weight="1.0"
+                    android:text="服务圈" />
+
+            </RadioGroup>
+
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>

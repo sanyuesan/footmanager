@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="10dp" 
+    android:background="#ffffff">
+
+    <!-- 右边菜单 -->
+    <RelativeLayout 
+        android:id="@+id/rightmenu"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:background="@drawable/technician_main_side_bg"
+	    android:visibility="invisible">
+    	<TextView 
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_alignParentRight="true"
+    		android:text="右侧"
+    	/>
+	</RelativeLayout>
+    
+    <!-- 左边菜单 -->
+    <LinearLayout 
+        android:id="@+id/leftmenu"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:background="@drawable/technician_main_side_bg"
+	    android:visibility="invisible">
+    	<LinearLayout android:layout_width="fill_parent"
+    	    android:layout_height="0dp"
+    	    android:layout_weight="1">
+	    	<ListView
+	            android:id="@+id/sideMenuList"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="left"
+	            android:choiceMode="singleChoice"
+	            android:divider="@drawable/side_menu_bottom_divider"
+	            android:dividerHeight="0dp"
+	            android:listSelector="@drawable/technician_main_side_menu_list_selector"
+	             />
+    	</LinearLayout>
+    	<LinearLayout android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:layout_marginBottom="0dp"
+    	    android:layout_gravity="bottom">
+    	    <include layout="@layout/logo"/>
+    	</LinearLayout>
+	</LinearLayout>
+
+    <com.footmanager.main.TechnicianHorizontalScrollView 
+        android:id="@+id/myScrollView"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:background="#00ffffff" 
+        android:fadingEdge="none" 
+        android:scrollbars="none">
+
+        <!--  -->
+        <LinearLayout 
+            android:id="@+id/top"
+            android:layout_height="fill_parent" 
+            android:layout_width="fill_parent"
+            android:orientation="horizontal" 
+            android:background="#00ffffff" 
+           >
+        </LinearLayout>
+
+    </com.footmanager.main.TechnicianHorizontalScrollView>
+
+</FrameLayout>

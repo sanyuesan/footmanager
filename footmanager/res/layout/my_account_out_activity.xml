@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/manager_main_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true" 
+    android:id="@+id/mainView">
+    <LinearLayout android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:gravity="top">
+		   <include layout="@layout/title_bar_with_right_btn"
+    			android:id="@+id/mainTitle"/> 
+	</LinearLayout>
+	<ScrollView android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"> 
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical">
+        
+        <include layout="@layout/my_account_form_layout"/>
+        <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="45dp"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:layout_marginLeft="15dp"
+        	android:layout_marginRight="15dp">
+		        <TextView android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="兑现金额："
+		            android:textColor="@color/black"
+		            android:textSize="20sp"/>
+		        <EditText android:id="@+id/outAccount"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:background="@null"
+		            android:maxLength="20"
+		            android:textSize="20sp"/>
+	    </LinearLayout>
+        <ImageView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:background="@drawable/login_input_bottom_line"/>
+		   
+    </LinearLayout>
+    </ScrollView>  
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="vertical"
+   android:focusable="true"
+   android:focusableInTouchMode="true"
+   android:background="@drawable/technician_main_bg">
+   <LinearLayout android:layout_width="fill_parent"
+	   android:layout_height="wrap_content"
+	   android:gravity="top">
+		<include layout="@layout/title_bar_with_right_btn"
+			android:id="@+id/mainTitle"/> 
+   </LinearLayout>
+	<ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+	    <LinearLayout android:orientation="vertical"
+	       android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:gravity="top"
+	       android:layout_marginTop="10dp"
+	       android:layout_marginLeft="10dp"
+		   android:layout_marginRight="10dp">
+		   <TextView android:layout_width="fill_parent"
+		       android:layout_height="wrap_content"
+		       android:text="请假周期"
+		       android:textColor="@color/black"
+		       android:textSize="18sp"
+		       android:layout_gravity="left"
+		       android:layout_margin="10dp"/>
+		    <RadioGroup
+                android:id="@+id/main_tab_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/technician_vacation_radiogroup_bg"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/preHalfDay"
+                    style="@style/MMTabButton"
+                    android:background="@drawable/technician_vacation_radiogroup_btn_selector"
+                    android:layout_weight="1.0" 
+                    android:checked="true"   
+                    android:text="早半天"/>
+                <RadioButton
+                    android:id="@+id/lastHalfDay"
+                    style="@style/MMTabButton"
+                    android:background="@drawable/technician_vacation_radiogroup_btn_selector"
+                    android:layout_weight="1.0" 
+                    android:checked="true"   
+                    android:text="晚半天"/>
+                <RadioButton
+                    android:id="@+id/day"
+                    style="@style/MMTabButton"
+                    android:background="@drawable/technician_vacation_radiogroup_btn_selector"
+                    android:layout_weight="1.0" 
+                    android:checked="true"   
+                    android:text="整天"/>
+                <RadioButton
+                    android:id="@+id/twoDay"
+                    style="@style/MMTabButton"
+                    android:background="@drawable/technician_vacation_radiogroup_btn_selector"
+                    android:layout_weight="1.0" 
+                    android:checked="true"   
+                    android:text="两天"/>
+                <RadioButton
+                    android:id="@+id/longDay"
+                    style="@style/MMTabButton"
+                    android:background="@drawable/technician_vacation_radiogroup_btn_selector"
+                    android:layout_weight="1.0" 
+                    android:checked="true"   
+                    android:text="长假"/>
+            </RadioGroup>
+		   <TextView android:layout_width="fill_parent"
+		       android:layout_height="wrap_content"
+		       android:text="事因"
+		       android:textColor="@color/black"
+		       android:textSize="18sp"
+		       android:layout_gravity="left"
+		       android:layout_margin="10dp"/>
+		    <EditText
+			    android:layout_width="fill_parent"
+				android:layout_height="wrap_content" 
+				android:textColor="#000000"
+				android:textSize="16sp"
+				android:hint="请填写请假原因"
+				android:background="@drawable/message_text_border"  
+				android:inputType="textMultiLine"
+				android:gravity="left|top"
+				android:lines="8"
+				android:scrollbars="vertical"/>
+		    <LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:gravity="left"
+				android:layout_margin="10dp">
+				<TextView 
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="@color/black"
+					android:text="起始时间"
+					android:textSize="18sp"/>
+				<EditText android:id="@+id/date" 
+					android:layout_width="150dp"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:textSize="18sp"
+					android:editable="false" />
+				<Button android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/select_btn"
+				    android:layout_gravity="center_vertical"
+				    android:id="@+id/selectBtn"/>
+			</LinearLayout>
+		    <ImageView android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="10dp"
+		       	android:layout_marginRight="10dp"
+		       	android:background="@drawable/login_input_bottom_line"/>
+	    </LinearLayout>
+	</ScrollView>
+</LinearLayout>

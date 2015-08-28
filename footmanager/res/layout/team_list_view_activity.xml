@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:id="@+id/stroeTeamMain"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" 
+    android:orientation="vertical" 
+    android:background="@drawable/manager_main_bg">
+   <LinearLayout android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:gravity="top">
+	   <include layout="@layout/title_bar_without_right_btn"
+   			android:id="@+id/mainTitle"/> 
+   </LinearLayout> 
+   <ScrollView android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"> 
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp">
+		   <LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp">
+				
+				<ImageView android:id="@+id/employeePhoto" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:layout_gravity="center_vertical"
+					android:background="@drawable/team_user_photo"/>
+			
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical">
+			
+				    <LinearLayout android:orientation="horizontal"
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content">
+						<TextView android:id="@+id/employeeNoLable"
+						    android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 
+							android:textColor="#000000"
+							android:text="@string/employeeNoLable"
+							android:textSize="18sp" />
+						<TextView android:id="@+id/employeeNo" 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 
+							android:textColor="#000000"
+							android:textSize="18sp" />
+					</LinearLayout>
+					<LinearLayout android:orientation="horizontal"
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content">
+						<TextView android:id="@+id/employeePositionLable" 
+						    android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 
+							android:textColor="#000000"
+							android:text="@string/employeePositionLable"
+							android:textSize="18sp" />
+						<TextView android:id="@+id/employeePosition" 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 
+							android:textColor="#000000"
+							android:textSize="18sp" />
+					</LinearLayout>
+					<LinearLayout android:orientation="horizontal"
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content">
+						<TextView android:id="@+id/employeeTelLable" 
+						    android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 
+							android:textColor="#000000"
+							android:text="@string/employeeTelLable"
+							android:textSize="18sp" />
+						<TextView android:id="@+id/employeeTel" 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 
+							android:textColor="#000000"
+							android:textSize="18sp" />
+					</LinearLayout>
+					<LinearLayout android:orientation="horizontal"
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content">
+						<TextView android:id="@+id/employeeLevelLable" 
+						    android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 
+							android:textColor="#000000"
+							android:text="@string/employeeLevelLable"
+							android:textSize="18sp" />
+						<ImageView android:id="@+id/employeeLevel" 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" />
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:background="@drawable/team_list_view_title_bg">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="个人能力"
+				android:textSize="20sp"
+				android:layout_marginLeft="23dp"
+				android:layout_marginTop="15dp"
+				 />
+			</LinearLayout>
+			
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical">
+		
+			    <LinearLayout android:orientation="horizontal"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp">
+					<TextView 
+					    android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:text="凝聚力："
+						android:textSize="18sp"
+						android:layout_marginLeft="20dp" />
+					<TextView android:id="@+id/employeeCohesion" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:textSize="18sp"
+						android:text="2000分" />
+					
+					<TextView
+					    android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:text="规划力："
+						android:textSize="18sp"
+						android:layout_marginLeft="25dp" />
+					<TextView android:id="@+id/employeePlanning" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:textSize="18sp"
+						android:text="2000分" />
+				</LinearLayout>
+				<LinearLayout android:orientation="horizontal"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dp">
+					<TextView 
+					    android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:text="整合力："
+						android:textSize="18sp"
+						android:layout_marginLeft="20dp" />
+					<TextView android:id="@+id/employeeIntegration" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:textSize="18sp"
+						android:text="2000分" />
+					
+					<TextView
+					    android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:text="操控力："
+						android:textSize="18sp"
+						android:layout_marginLeft="25dp" />
+					<TextView android:id="@+id/employeeControl" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:textSize="18sp"
+						android:text="2000分" />
+				</LinearLayout>
+				<LinearLayout android:orientation="horizontal"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dp">
+					<TextView 
+					    android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:text="人脉力："
+						android:textSize="18sp"
+						android:layout_marginLeft="20dp" />
+					<TextView android:id="@+id/employeePersons" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:textSize="18sp"
+						android:text="2000分" />
+					
+				</LinearLayout>
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:background="@drawable/team_list_view_title_bg">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="个人介绍"
+				android:textSize="20sp"
+				android:layout_marginLeft="23dp"
+				android:layout_marginTop="15dp"
+				 />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content">
+					<TextView android:id="@+id/employeeIntroduce"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:textColor="#000000"
+						android:textSize="18sp"
+						android:text="啥哈哈哈哈哈哈哈哈哈哈哈哈哈喇哈喇哈哈啥哈哈哈哈哈哈哈哈哈哈哈哈哈喇哈喇哈哈啥哈哈哈哈哈哈哈哈哈哈哈哈哈喇哈喇哈哈" />
+					
+				</LinearLayout>
+	   </LinearLayout>
+   </ScrollView>
+</LinearLayout>

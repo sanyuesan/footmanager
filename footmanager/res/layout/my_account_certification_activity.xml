@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/manager_main_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true" 
+    android:id="@+id/mainView">
+    <LinearLayout android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:gravity="top">
+		   <include layout="@layout/title_bar_with_right_btn"
+    			android:id="@+id/mainTitle"/> 
+	</LinearLayout>
+	<ScrollView android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"> 
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical">
+        
+        <include layout="@layout/my_account_form_layout"/> 
+		   
+        <Button android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:background="@drawable/manager_my_persons_agent_btn_selector"
+	        android:textSize="20sp"
+	        android:text="编辑"
+	        android:textColor="@color/white"
+	        android:id="@+id/editBtn"/>
+        
+    </LinearLayout>
+    </ScrollView>  
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/leader_main_bg"
+        android:orientation="vertical" >
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:layout_gravity="top">
+            <RadioGroup
+                android:id="@+id/main_tab_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_top_bar_bg"
+                android:gravity="top"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/tab_btn_1"
+                    style="@style/MMTabButton"
+                    android:background="@drawable/tab_top_bar_2btn_selector"
+                    android:layout_weight="1.0" 
+                    android:checked="true"   
+                    android:text="早班"/>
+
+                <RadioButton
+                    android:id="@+id/tab_btn_2"
+                    style="@style/MMTabButton"
+                    android:background="@drawable/tab_top_bar_2btn_selector"
+                    android:layout_weight="1.0"
+                    android:text="晚班" />
+            </RadioGroup>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</TabHost>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp">
+		
+		<ImageView android:id="@+id/promotionIcon" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_gravity="center_vertical"/>
+	
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="wrap_content" 
+			android:layout_height="fill_parent"
+			android:layout_gravity="center_vertical">
+	
+		    <LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center_vertical">
+				<TextView android:id="@+id/promotionNameLable"
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:text="名称:"
+					android:textSize="16sp" />
+				<TextView android:id="@+id/promotionName" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:textSize="16sp" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center_vertical">
+				<TextView
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:text="数量:"
+					android:textSize="16sp" />
+				<TextView android:id="@+id/promotionCount" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:textSize="16sp" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center_vertical">
+				<TextView 
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:text="时间:"
+					android:textSize="16sp" />
+				<TextView android:id="@+id/promotionStartTime" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:textSize="16sp" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center_vertical">
+				<TextView
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:text="限时券:"
+					android:textSize="16sp" />
+				<TextView android:id="@+id/promotionLimit" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:textSize="16sp" />
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout android:orientation="horizontal"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:gravity="center_vertical">
+				<TextView
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:text="已用:"
+					android:textSize="16sp" />
+				<TextView android:id="@+id/promotionUsedCount" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:textColor="#000000"
+					android:textSize="16sp" />
+		</LinearLayout>
+
+	</LinearLayout>
+	<ImageView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+       	android:layout_marginRight="10dp"
+       	android:background="@drawable/login_input_bottom_line"/>
+</LinearLayout>
